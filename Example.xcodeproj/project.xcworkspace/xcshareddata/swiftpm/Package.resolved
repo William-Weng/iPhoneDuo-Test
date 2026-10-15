@@ -1,0 +1,15 @@
+{
+  "originHash" : "fbb116bf8ac319c2435aa8397bc399e7d1638812bef5b32a8614d68da040517a",
+  "pins" : [
+    {
+      "identity" : "wwinterfaceorientationcoordinator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWInterfaceOrientationCoordinator",
+      "state" : {
+        "revision" : "f4c68c977e591e258cfe4237f96a97d63425ec72",
+        "version" : "0.5.1"
+      }
+    }
+  ],
+  "version" : 3
+}
