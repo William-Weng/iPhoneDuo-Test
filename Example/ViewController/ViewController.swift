@@ -26,7 +26,7 @@ private extension ViewController {
         
         if let duo = navigationController as? DuoNavigationController {
             
-            updateLayout(info: duo.orientationInformation)
+            updateLayout(info: duo.layoutEnvironmentInformation)
             
             duo.callback = { [weak self] info in
                 guard let self else { return }

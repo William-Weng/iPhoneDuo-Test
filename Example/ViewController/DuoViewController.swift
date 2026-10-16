@@ -35,7 +35,7 @@ private extension DuoViewController {
         
         if let duo = navigationController as? DuoNavigationController {
             
-            chanageViewController(with: duo.orientationInformation)
+            chanageViewController(with: duo.layoutEnvironmentInformation)
             
             duo.callback = { [weak self] info in
                 guard let self else { return }
