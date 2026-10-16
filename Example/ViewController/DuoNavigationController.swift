@@ -11,10 +11,10 @@ import WWInterfaceOrientationCoordinator
 final class DuoNavigationController: UINavigationController {
     
     /// 目前最新的方向／horizontal size class 資訊
-    var orientationInformation: WWOrientationInformation = .nil
+    var orientationInformation: WWLayoutEnvironmentInformation = .unknown
     
     /// 方向資訊更新時的 callback
-    var callback: ((WWOrientationInformation) -> Void)?
+    var callback: ((WWLayoutEnvironmentInformation) -> Void)?
     
     /// 方向協調器；綁定在 Navigation Controller 上，由它統一觀察旋轉、size class 與 transition
     private lazy var orientationCoordinator = WWInterfaceOrientationCoordinator(viewController: self)
@@ -59,7 +59,7 @@ private extension DuoNavigationController {
     /// 更新最新方向資訊，並通知目前有興趣的 child VC
     ///
     /// - Parameter info: 最新的方向與 horizontal size class 資訊
-    func callbackAction(with info: WWOrientationInformation) {
+    func callbackAction(with info: WWLayoutEnvironmentInformation) {
         orientationInformation = info
         callback?(info)
     }

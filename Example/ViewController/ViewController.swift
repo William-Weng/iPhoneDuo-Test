@@ -38,7 +38,7 @@ private extension ViewController {
     /// 依 horizontal size class 與 interface orientation 更新圖片
     ///
     /// - Parameter info: 由 DuoNavigationController 提供的方向資訊
-    func updateLayout(info: WWOrientationInformation) {
+    func updateLayout(info: WWLayoutEnvironmentInformation) {
 
         switch (info.isRegularWidth , info.isPortrait) {
         case (false, true): imageView.image = .outterPortrait       // Compact width + Portrait

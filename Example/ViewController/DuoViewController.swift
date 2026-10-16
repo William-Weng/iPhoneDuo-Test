@@ -47,7 +47,7 @@ private extension DuoViewController {
     /// 依 horizontal size class 與 interface orientation 選擇對應的 child VC
     ///
     /// - Parameter info: 由 DuoNavigationController 提供的方向資訊
-    func chanageViewController(with info: WWOrientationInformation) {
+    func chanageViewController(with info: WWLayoutEnvironmentInformation) {
         
         let nextViewController: DuoDelegate
         

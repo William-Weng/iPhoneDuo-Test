@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWInterfaceOrientationCoordinator",
       "state" : {
-        "revision" : "f4c68c977e591e258cfe4237f96a97d63425ec72",
-        "version" : "0.5.1"
+        "revision" : "ac81679fb86d72fc011422f6e4242c35683e86a7",
+        "version" : "0.5.3"
       }
     }
   ],

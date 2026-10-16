@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		812A74FF307F616E00287876 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 812A74FE307F616E00287876 /* WWInterfaceOrientationCoordinator */; };
 		8136A437308071BB00F608DC /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8136A436308071BB00F608DC /* WWInterfaceOrientationCoordinator */; };
-		8136A45D3080B64300F608DC /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8136A45C3080B64300F608DC /* WWInterfaceOrientationCoordinator */; };
+		8136A4EA3080C73500F608DC /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8136A4E93080C73500F608DC /* WWInterfaceOrientationCoordinator */; };
+		818623FA3081B4EB00A20297 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 818623F93081B4EB00A20297 /* WWInterfaceOrientationCoordinator */; };
+		818624453081C3A300A20297 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +43,10 @@
 		812A749E307F5FC800287876 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				8136A45D3080B64300F608DC /* WWInterfaceOrientationCoordinator in Frameworks */,
+				818623FA3081B4EB00A20297 /* WWInterfaceOrientationCoordinator in Frameworks */,
+				818624453081C3A300A20297 /* WWInterfaceOrientationCoordinator in Frameworks */,
 				8136A437308071BB00F608DC /* WWInterfaceOrientationCoordinator in Frameworks */,
+				8136A4EA3080C73500F608DC /* WWInterfaceOrientationCoordinator in Frameworks */,
 				812A74FF307F616E00287876 /* WWInterfaceOrientationCoordinator in Frameworks */,
 			);
 		};
@@ -85,7 +89,9 @@
 			packageProductDependencies = (
 				812A74FE307F616E00287876 /* WWInterfaceOrientationCoordinator */,
 				8136A436308071BB00F608DC /* WWInterfaceOrientationCoordinator */,
-				8136A45C3080B64300F608DC /* WWInterfaceOrientationCoordinator */,
+				8136A4E93080C73500F608DC /* WWInterfaceOrientationCoordinator */,
+				818623F93081B4EB00A20297 /* WWInterfaceOrientationCoordinator */,
+				818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */,
 			);
 			productName = Example;
 			productReference = 812A74A1307F5FC800287876 /* Example.app */;
@@ -116,7 +122,7 @@
 			mainGroup = 812A7498307F5FC800287876;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8136A45B3080B64300F608DC /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */,
+				818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 812A74A2307F5FC800287876 /* Products */;
@@ -158,8 +164,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -195,8 +201,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,12 +368,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8136A45B3080B64300F608DC /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */ = {
+		818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWInterfaceOrientationCoordinator";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 0.5.1;
+				minimumVersion = 0.5.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -381,9 +387,17 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWInterfaceOrientationCoordinator;
 		};
-		8136A45C3080B64300F608DC /* WWInterfaceOrientationCoordinator */ = {
+		8136A4E93080C73500F608DC /* WWInterfaceOrientationCoordinator */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8136A45B3080B64300F608DC /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */;
+			productName = WWInterfaceOrientationCoordinator;
+		};
+		818623F93081B4EB00A20297 /* WWInterfaceOrientationCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WWInterfaceOrientationCoordinator;
+		};
+		818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */;
 			productName = WWInterfaceOrientationCoordinator;
 		};
 /* End XCSwiftPackageProductDependency section */
