@@ -31,6 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="79Q-mG-N8r">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.up.circle" catalog="system" id="ynQ-A7-uLe">
+                            <connections>
+                                <segue destination="MAs-Oe-A2C" kind="show" id="tu0-Zz-vF9"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="arrow.forward" catalog="system" id="Gyt-hP-EfB">
                             <connections>
                                 <segue destination="Mv6-aR-dFE" kind="show" id="t0z-BO-Vgo"/>
@@ -73,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jep-gM-N7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849.2957746478874" y="135.1145038167939"/>
+            <point key="canvasLocation" x="1932" y="137"/>
         </scene>
         <!--Duo Navigation Controller-->
         <scene sceneID="Cd2-wX-TOf">
@@ -93,11 +98,70 @@
             </objects>
             <point key="canvasLocation" x="43.511450381679388" y="136.61971830985917"/>
         </scene>
+        <!--Arrangement Container-->
+        <scene sceneID="9RM-fM-Phu">
+            <objects>
+                <viewController id="MAs-Oe-A2C" customClass="ArrangementContainer" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgX-du-sc6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8g3-Sd-1Ub"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xCD-nI-GpT"/>
+                    <connections>
+                        <segue destination="Gqc-FH-1rz" kind="show" identifier="PrimarySegue" id="R4o-mL-OzM"/>
+                        <segue destination="dnW-93-cyU" kind="show" identifier="SecondarySegue" id="sVh-nj-OEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ql-hh-p9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="902"/>
+        </scene>
+        <!--Primary View Controller-->
+        <scene sceneID="9hJ-GF-baL">
+            <objects>
+                <viewController storyboardIdentifier="PrimaryViewController" id="Gqc-FH-1rz" customClass="PrimaryViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fAg-Zq-Tta">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="knK-Q9-sOz"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d76-wv-MFz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQE-sl-5ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="1712"/>
+        </scene>
+        <!--Secondary View Controller-->
+        <scene sceneID="NLw-Ve-UFT">
+            <objects>
+                <viewController storyboardIdentifier="SecondaryViewController" id="dnW-93-cyU" customClass="SecondaryViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pqb-rv-HU6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kAF-Cw-DJd"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fiZ-CS-moZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6G-DS-IBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685" y="1712"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.forward" catalog="system" width="128" height="99"/>
+        <image name="arrow.up.circle" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.0" green="0.75294117650000003" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.55294117649999996" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

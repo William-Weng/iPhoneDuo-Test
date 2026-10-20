@@ -7,6 +7,21 @@
 
 import UIKit
 
+extension UIViewController {
+    
+    static func instantiate(fromBundle bundle: Bundle? = nil) -> Self {
+        
+        let storyboardName = "Main"
+        let identifier = String(describing: Self.self)
+
+        guard let viewController = UIStoryboard(name: storyboardName, bundle: bundle).instantiateViewController(withIdentifier: identifier) as? Self else {
+            fatalError("Could not instantiate \(Self.self) from \(storyboardName).storyboard")
+        }
+
+        return viewController
+    }
+}
+
 // MARK: - UIView
 extension UIView {
     
