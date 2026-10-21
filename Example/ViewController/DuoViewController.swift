@@ -20,7 +20,7 @@ final class DuoViewController: UIViewController {
     private lazy var outterLandscapeViewController = OutterLandscapeViewController(nibName: "OutterLandscapeViewController", bundle: nil)
     private lazy var innerPortraitViewController = InnerPortraitViewController(nibName: "InnerPortraitViewController", bundle: nil)
     private lazy var innerLandscapeViewController = InnerLandscapeViewController(nibName: "InnerLandscapeViewController", bundle: nil)
-        
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerOrientationCallback()

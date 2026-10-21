@@ -11,7 +11,8 @@
 		8136A437308071BB00F608DC /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8136A436308071BB00F608DC /* WWInterfaceOrientationCoordinator */; };
 		8136A4EA3080C73500F608DC /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8136A4E93080C73500F608DC /* WWInterfaceOrientationCoordinator */; };
 		818623FA3081B4EB00A20297 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 818623F93081B4EB00A20297 /* WWInterfaceOrientationCoordinator */; };
-		818624453081C3A300A20297 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */; };
+		8187F65030888DA3005F5550 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8187F64F30888DA3005F5550 /* WWInterfaceOrientationCoordinator */; };
+		8187F69C3088916D005F5550 /* WWInterfaceOrientationCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 8187F69B3088916D005F5550 /* WWInterfaceOrientationCoordinator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				818623FA3081B4EB00A20297 /* WWInterfaceOrientationCoordinator in Frameworks */,
-				818624453081C3A300A20297 /* WWInterfaceOrientationCoordinator in Frameworks */,
+				8187F65030888DA3005F5550 /* WWInterfaceOrientationCoordinator in Frameworks */,
 				8136A437308071BB00F608DC /* WWInterfaceOrientationCoordinator in Frameworks */,
 				8136A4EA3080C73500F608DC /* WWInterfaceOrientationCoordinator in Frameworks */,
+				8187F69C3088916D005F5550 /* WWInterfaceOrientationCoordinator in Frameworks */,
 				812A74FF307F616E00287876 /* WWInterfaceOrientationCoordinator in Frameworks */,
 			);
 		};
@@ -91,7 +93,8 @@
 				8136A436308071BB00F608DC /* WWInterfaceOrientationCoordinator */,
 				8136A4E93080C73500F608DC /* WWInterfaceOrientationCoordinator */,
 				818623F93081B4EB00A20297 /* WWInterfaceOrientationCoordinator */,
-				818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */,
+				8187F64F30888DA3005F5550 /* WWInterfaceOrientationCoordinator */,
+				8187F69B3088916D005F5550 /* WWInterfaceOrientationCoordinator */,
 			);
 			productName = Example;
 			productReference = 812A74A1307F5FC800287876 /* Example.app */;
@@ -122,7 +125,7 @@
 			mainGroup = 812A7498307F5FC800287876;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */,
+				8187F69A3088916D005F5550 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 812A74A2307F5FC800287876 /* Products */;
@@ -368,12 +371,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */ = {
+		8187F69A3088916D005F5550 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWInterfaceOrientationCoordinator";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 0.6.0;
+				minimumVersion = 0.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -395,9 +398,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWInterfaceOrientationCoordinator;
 		};
-		818624443081C3A300A20297 /* WWInterfaceOrientationCoordinator */ = {
+		8187F64F30888DA3005F5550 /* WWInterfaceOrientationCoordinator */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 818624433081C3A300A20297 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */;
+			productName = WWInterfaceOrientationCoordinator;
+		};
+		8187F69B3088916D005F5550 /* WWInterfaceOrientationCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8187F69A3088916D005F5550 /* XCRemoteSwiftPackageReference "WWInterfaceOrientationCoordinator" */;
 			productName = WWInterfaceOrientationCoordinator;
 		};
 /* End XCSwiftPackageProductDependency section */

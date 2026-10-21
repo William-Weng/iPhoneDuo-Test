@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WWInterfaceOrientationCoordinator
 
 @available(iOS 27.1, *)
 final class ArrangementContainer: UIViewController {
@@ -22,24 +23,58 @@ final class ArrangementContainer: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .clear
+        initDuoViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerOrientationCallback()
+    }
+    
+    func registerOrientationCallback() {
         
-        let primaryVC = primaryViewController
-        let secondaryVC = secondaryViewController
-        let arrangement = splitArrangement(style: .custom(axis: .horizontal, preferred: .fractional(0.3), placement: .primary))
-        
-        arrangementVC.setViewController(primaryVC, for: .primary)
-        arrangementVC.setViewController(secondaryVC, for: .secondary)
-        arrangementVC.updateArrangement(arrangement)
-        
-        addChild(arrangementVC)
-        view.addSubview(arrangementVC.view)
-        arrangementVC.view.frame = view.bounds
-        arrangementVC.didMove(toParent: self)
+        if let duo = navigationController as? DuoNavigationController {
+            
+            duo.callback = { [weak self] info in
+                guard let self else { return }
+                self.updateRatio(for: info)
+            }
+        }
     }
 }
 
 @available(iOS 27.1, *)
 private extension ArrangementContainer {
+    
+    func initDuoViews() {
+        
+        let primaryVC = primaryViewController
+        let secondaryVC = secondaryViewController
+        
+        arrangementVC.setViewController(primaryVC, for: .primary)
+        arrangementVC.setViewController(secondaryVC, for: .secondary)
+        
+        addChild(arrangementVC)
+        view.addSubview(arrangementVC.view)
+        
+        arrangementVC.view.frame = view.bounds
+        arrangementVC.didMove(toParent: self)
+        arrangementVC.updateArrangement(.overlay)
+    }
+    
+    func updateRatio(for info: WWLayoutEnvironmentInformation) {
+        
+        let arrangement: UISplitArrangement
+        
+        if info.isRegularWidth, info.isLandscape {
+            let range = WWInterfaceOrientationCoordinator.crossAxisDimensionRange(with: view.frame.size, ratio: .widthFollowsHeight(390 / 844))
+            arrangement = splitArrangement(style: .custom(axis: .horizontal, preferred: try! range.get().preferred, placement: .primary))
+            arrangementVC.updateArrangement(arrangement)
+        } else {
+            arrangementVC.updateArrangement(.overlay)
+        }
+    }
     
     func splitArrangement(style: SplitArrangementStyle) -> UISplitArrangement  {
         
@@ -51,9 +86,12 @@ private extension ArrangementContainer {
             var properties = arrangement.defaultViewProperties
             
             properties.width.preferred = preferred
+            properties.height.preferred = preferred
+            
             arrangement.setViewProperties(properties, for: placement)
             
             return arrangement
         }
     }
 }
+

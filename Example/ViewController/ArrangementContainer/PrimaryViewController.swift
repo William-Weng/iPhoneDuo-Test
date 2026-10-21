@@ -9,6 +9,8 @@ import UIKit
 
 final class PrimaryViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
