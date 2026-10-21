@@ -36,6 +36,8 @@ final class ArrangementContainer: UIViewController {
         
         if let duo = navigationController as? DuoNavigationController {
             
+            updateRatio(for: duo.layoutEnvironmentInformation)
+            
             duo.callback = { [weak self] info in
                 guard let self else { return }
                 self.updateRatio(for: info)
