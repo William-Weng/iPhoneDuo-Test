@@ -4,7 +4,7 @@
 
 主要透過 `DuoNavigationController` 統一觀察 interface orientation 與 horizontal size class 的變化，再通知目前顯示的 `DuoViewController` 切換對應的子畫面。
 
-https://github.com/user-attachments/assets/388c04bc-85c9-4b01-b07e-fc400cd2fcde
+https://github.com/user-attachments/assets/fe964112-a64d-4f23-9380-af1fd705b3db
 
 ## 架構
 

@@ -17,8 +17,8 @@ final class DuoNavigationController: UINavigationController {
     var callback: ((WWLayoutEnvironmentInformation) -> Void)?
     
     /// 方向協調器；綁定在 Navigation Controller 上，由它統一觀察旋轉、size class 與 transition
-    private lazy var orientationCoordinator = WWInterfaceOrientationCoordinator(viewController: self)
-    
+    lazy var orientationCoordinator = WWInterfaceOrientationCoordinator(viewController: self)
+        
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         registerOrientationCoordinator()

@@ -8,6 +8,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Duo Container-->
+        <scene sceneID="ir3-la-djJ">
+            <objects>
+                <viewController id="sTi-q8-YiE" customClass="DuoContainer" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="akH-mh-tCV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-Wg-t1t">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrd-2X-huS">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="852"/>
+                                        <connections>
+                                            <segue destination="Y6b-Mg-HGD" kind="embed" id="fAu-td-SpS"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5U4-WK-yar">
+                                        <rect key="frame" x="197" y="0.0" width="196" height="852"/>
+                                        <connections>
+                                            <segue destination="v1Z-rd-lYy" kind="embed" id="c9Q-8A-3r2"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Ea-QR-dan"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DCq-Wg-t1t" secondAttribute="bottom" id="3Wf-Eq-AKJ"/>
+                            <constraint firstAttribute="trailing" secondItem="DCq-Wg-t1t" secondAttribute="trailing" id="bI2-9Q-Ebg"/>
+                            <constraint firstItem="DCq-Wg-t1t" firstAttribute="top" secondItem="akH-mh-tCV" secondAttribute="top" id="fjS-mY-3nf"/>
+                            <constraint firstItem="DCq-Wg-t1t" firstAttribute="leading" secondItem="akH-mh-tCV" secondAttribute="leading" id="jYE-bw-ZLB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5H4-Lh-QTY"/>
+                    <connections>
+                        <outlet property="duoStackView" destination="DCq-Wg-t1t" id="2q4-yb-ieO"/>
+                        <outlet property="mainContainer" destination="5U4-WK-yar" id="XI2-xi-pUf"/>
+                        <outlet property="subContainer" destination="Qrd-2X-huS" id="TPx-8H-Aqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5M-Dr-nBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200.7042253521126" y="-570.2290076335878"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -24,31 +70,40 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="iFH-uN-U7q" secondAttribute="bottom" id="0oz-mZ-0Rr"/>
-                            <constraint firstItem="iFH-uN-U7q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5aT-dT-WaU"/>
-                            <constraint firstItem="iFH-uN-U7q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ubs-td-gmc"/>
-                            <constraint firstAttribute="trailing" secondItem="iFH-uN-U7q" secondAttribute="trailing" id="xJh-eY-vLT"/>
+                            <constraint firstAttribute="bottom" secondItem="iFH-uN-U7q" secondAttribute="bottom" id="FhB-jo-HGs"/>
+                            <constraint firstItem="iFH-uN-U7q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bLe-5M-x0L"/>
+                            <constraint firstAttribute="trailing" secondItem="iFH-uN-U7q" secondAttribute="trailing" id="o7C-lv-1YF"/>
+                            <constraint firstItem="iFH-uN-U7q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="soM-Ox-Okp"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="79Q-mG-N8r">
-                        <barButtonItem key="leftBarButtonItem" image="arrow.up.circle" catalog="system" id="ynQ-A7-uLe">
-                            <connections>
-                                <segue destination="MAs-Oe-A2C" kind="show" id="tu0-Zz-vF9"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem image="arrow.up.circle" catalog="system" id="ynQ-A7-uLe">
+                                <connections>
+                                    <segue destination="MAs-Oe-A2C" kind="show" id="tu0-Zz-vF9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="abs.brakesignal" catalog="system" id="7Hx-cP-h7D">
+                                <connections>
+                                    <segue destination="sTi-q8-YiE" kind="show" id="XkP-cc-bvj"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="arrow.forward" catalog="system" id="Gyt-hP-EfB">
                             <connections>
                                 <segue destination="Mv6-aR-dFE" kind="show" id="t0z-BO-Vgo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="iFH-uN-U7q" id="eYL-dV-8zE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970.2290076335878" y="136.61971830985917"/>
+            <point key="canvasLocation" x="969.71830985915494" y="135.1145038167939"/>
         </scene>
         <!--Duo View Controller-->
         <scene sceneID="2W2-lG-Rw3">
@@ -78,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jep-gM-N7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="137"/>
+            <point key="canvasLocation" x="2201" y="137"/>
         </scene>
         <!--Duo Navigation Controller-->
         <scene sceneID="Cd2-wX-TOf">
@@ -131,7 +186,6 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="knK-Q9-sOz"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="x2Z-JX-EC2" secondAttribute="trailing" id="8B5-AS-VcX"/>
                             <constraint firstItem="x2Z-JX-EC2" firstAttribute="leading" secondItem="fAg-Zq-Tta" secondAttribute="leading" id="Z1r-NI-Egk"/>
@@ -146,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQE-sl-5ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345.77464788732397" y="1710.6870229007634"/>
+            <point key="canvasLocation" x="341" y="1712"/>
         </scene>
         <!--Secondary View Controller-->
         <scene sceneID="NLw-Ve-UFT">
@@ -162,11 +216,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6G-DS-IBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685" y="1712"/>
+            <point key="canvasLocation" x="1702" y="1712"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uUa-oQ-mcd">
+            <objects>
+                <viewController id="v1Z-rd-lYy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cn3-Bh-hUE">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7D-d8-ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208" y="-778"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8kN-g2-MpD">
+            <objects>
+                <viewController id="Y6b-Mg-HGD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Yo-EX-W6E">
+                        <rect key="frame" x="0.0" y="0.0" width="197" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATN-LA-r3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3207" y="-340"/>
         </scene>
     </scenes>
     <resources>
         <image name="Duo" width="750" height="1334"/>
+        <image name="abs.brakesignal" catalog="system" width="128" height="91"/>
         <image name="arrow.forward" catalog="system" width="128" height="99"/>
         <image name="arrow.up.circle" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
@@ -174,6 +257,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.0" green="0.75294117650000003" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -4,6 +4,7 @@
 //
 //  Created by William.Weng on 2026/10/20.
 //
+// [iPhone Duo 內屏可打開應用第二獨立窗口 - UIWindowSceneActivation](https://news.qq.com/rain/a/20260914A04PUW00)
 
 import UIKit
 import WWInterfaceOrientationCoordinator
