@@ -53,33 +53,8 @@ private extension SecondaryViewController {
         // 先放圖片，再放模糊層。
         view.addSubview(backgroundImageView)
         view.addSubview(blurView)
-
-        NSLayoutConstraint.activate([
-            backgroundImageView.topAnchor.constraint(
-                equalTo: view.topAnchor
-            ),
-            backgroundImageView.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor
-            ),
-            backgroundImageView.trailingAnchor.constraint(
-                equalTo: view.trailingAnchor
-            ),
-            backgroundImageView.bottomAnchor.constraint(
-                equalTo: view.bottomAnchor
-            ),
-
-            blurView.topAnchor.constraint(
-                equalTo: view.topAnchor
-            ),
-            blurView.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor
-            ),
-            blurView.trailingAnchor.constraint(
-                equalTo: view.trailingAnchor
-            ),
-            blurView.bottomAnchor.constraint(
-                equalTo: view.bottomAnchor
-            )
-        ])
+        
+        backgroundImageView.autolayout(on: view)
+        blurView.autolayout(on: view)
     }
 }
